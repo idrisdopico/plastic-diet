@@ -1,17 +1,40 @@
 @import '../mixins/typography';
 
 .form {
-    bottom: 1.2rem;
+    bottom: 2.4rem;
+    max-width: 700px;
     position: relative;
 
     &__input {
         @include style-regular;
+        border: 0;
         border-radius: 8px;
         margin: 0 0 1rem;
         padding: 10px 1rem;
 
         &::placeholder {
             color: #999;
+        }
+    }
+
+    &__button {
+        border: 0;
+    }
+
+    @include screen($screen-simple) {
+        display: flex;
+
+        &__input {
+            border: 0;
+            border-radius: 0;
+            margin: 0;
+        }
+
+        &__button {
+            border: 0;
+            border-radius: 0;
+            border-top-right-radius: 40px;
+            border-bottom-right-radius: 40px;
         }
     }
 }

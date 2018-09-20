@@ -4,16 +4,16 @@
 .header {
     display: block;
     position: relative;
-    background: url('../img/background-mobile.png') center center no-repeat #000;
+    background: url('../img/background-mobile.png') center center no-repeat $c-ocean;
     background-size: cover;
     margin: 0 0 170px;
     height: 450px;
 
     &__wrapper {
         @include container;
-        background: #02161B;
+        background: $c-ocean;
         bottom: 0;
-        height: 200px;
+        height: 190px;
         transform: translateY(calc(100% - 30px));
         position: absolute;
         width: 100%;
@@ -28,20 +28,48 @@
         @include style-heading;
         color: $c-white;
         position: relative;
-        margin: 0 0 10px;
+        width: 290px;
     }
 
     &__line {
         background: $c-prim;
         border-radius: 5px;
         height: 10px;
-        position: absolute;
         width: 207px;
     }
 
+    @include screen($screen-minimal) {
+        background: url('../img/background.png') top center no-repeat $c-ocean;
+        background-size: contain;
+        margin: 0;
+        height: 620px;
+
+        &__wrapper {
+            background: transparent;
+            height: auto;
+            transform: translateY(0);
+        }
+    }
+
     @include screen($screen-simple) {
+        margin: 0 0 2.25rem;
+
+        &__heading {
+            top: -60px;
+        }
+
         &__title {
-            margin: 0 0 20px;
+            width: 60%;
+        }
+
+        &__line {
+            width: 290px;
+        }
+    }
+
+    @include screen($screen-normal) {
+        &__title {
+            margin: 0 0 1rem;
         }
     }
 }

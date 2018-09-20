@@ -5,4 +5,8 @@
     max-width: 1200px;
     padding: 0 1rem;
     width: 100%;
+
+    @include screen($screen-simple) {
+        padding: 0 2.75rem;
+    }
 }

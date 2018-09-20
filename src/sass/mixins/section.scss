@@ -1,3 +1,10 @@
+@import '../config/sizes';
+@import "../mixins/screen";
+
 @mixin section {
     padding: 2rem 1rem;
+
+    @include screen($screen-simple) {
+        padding: 0 2.75rem;
+    }
 }
