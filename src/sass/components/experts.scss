@@ -94,4 +94,14 @@
             top: -57px;
         }
     }
+
+    @include screen($screen-simple) {
+        &__image {
+            top: -147px;
+
+            &--woman {
+                top: -227px;
+            }
+        }
+    }
 }

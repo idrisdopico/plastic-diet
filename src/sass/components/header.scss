@@ -52,8 +52,6 @@
     }
 
     @include screen($screen-simple) {
-        margin: 0 0 2.25rem;
-
         &__heading {
             top: -60px;
         }

@@ -23,4 +23,8 @@
     &__intro {
         margin: 0 0 1rem;
     }
+
+    @include screen($screen-simple) {
+        padding: 2.25rem 2.75rem;
+    }
 }
