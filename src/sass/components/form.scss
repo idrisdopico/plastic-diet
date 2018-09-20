@@ -1,0 +1,17 @@
+@import '../mixins/typography';
+
+.form {
+    bottom: 1.2rem;
+    position: relative;
+
+    &__input {
+        @include style-regular;
+        border-radius: 8px;
+        margin: 0 0 1rem;
+        padding: 10px 1rem;
+
+        &::placeholder {
+            color: #999;
+        }
+    }
+}

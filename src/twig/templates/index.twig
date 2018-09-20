@@ -1,0 +1,29 @@
+<!doctype html>
+<html class="no-js" lang="en">
+    <head>
+        {% include '../partials/head.twig' %}
+    </head>
+    <body>
+        <div class="site">
+            <div class="site__header">
+                {% include '../partials/logos.twig' %}
+            </div>
+
+            <div class="site__content">
+                {% include '../partials/header.twig' %}
+                {% include '../partials/what.twig' %}
+                {% include '../partials/top3.twig' %}
+                {% include '../partials/experts.twig' %}
+            </div>
+
+            <div class="site__footer">
+                {% include '../partials/footer.twig' %}
+            </div>
+
+            {% block js %}
+                <script src="./assets/js/lib.js"></script>
+                <script src="./assets/js/app.js"></script>
+            {% endblock %}
+        </div>
+    </body>
+</html>

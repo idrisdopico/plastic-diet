@@ -1,0 +1,54 @@
+@import 'colors';
+@import 'sizes';
+@import '../mixins/screen';
+@import '../mixins/typography';
+
+html,
+body {
+    background: $c-white;
+    height: 100%;
+    min-height: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    @include style-heading;
+    color: $c-white;
+    margin: 0;
+}
+
+p {
+    @include style-regular;
+    font-style: inherit;
+    margin: 0;
+}
+
+ul,
+ol {
+    margin: 0;
+    padding: 0;
+}
+
+img,
+svg,
+video {
+    vertical-align: middle;
+}
+
+input,
+textarea {
+    border: 1px solid $c-black;
+    border-radius: 0;
+    padding: .5rem .6rem;
+    transition: border-color .25s;
+    width: 100%;
+
+    &:focus {
+        border: 1px solid $c-grey;
+        outline: none;
+    }
+}

@@ -1,0 +1,47 @@
+@import '../mixins/typography';
+@import '../mixins/container';
+
+.header {
+    display: block;
+    position: relative;
+    background: url('../img/background-mobile.png') center center no-repeat #000;
+    background-size: cover;
+    margin: 0 0 170px;
+    height: 450px;
+
+    &__wrapper {
+        @include container;
+        background: #02161B;
+        bottom: 0;
+        height: 200px;
+        transform: translateY(calc(100% - 30px));
+        position: absolute;
+        width: 100%;
+    }
+
+    &__heading {
+        position: relative;
+        top: -50px;
+    }
+
+    &__title {
+        @include style-heading;
+        color: $c-white;
+        position: relative;
+        margin: 0 0 10px;
+    }
+
+    &__line {
+        background: $c-prim;
+        border-radius: 5px;
+        height: 10px;
+        position: absolute;
+        width: 207px;
+    }
+
+    @include screen($screen-simple) {
+        &__title {
+            margin: 0 0 20px;
+        }
+    }
+}

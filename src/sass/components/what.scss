@@ -1,0 +1,27 @@
+@import '../mixins/typography';
+@import '../mixins/container';
+@import '../mixins/section';
+
+.what {
+    @include section;
+
+    &__heading {
+        margin: 0 0 1.5rem;
+    }
+
+    &__media {
+        display: none;
+    }
+
+    &__content {
+        margin: 0 0 3.25rem;
+
+        &:last-child {
+            margin: 0;
+        }
+    }
+
+    &__intro {
+        margin: 0 0 1rem;
+    }
+}

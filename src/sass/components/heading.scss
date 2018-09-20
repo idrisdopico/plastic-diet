@@ -1,0 +1,11 @@
+.heading {
+    text-align: center;
+
+    &__line {
+        background: $c-prim;
+        border-radius: 2.5px;
+        height: 5px;
+        margin: 0 auto;
+        width: 78px;
+    }
+}

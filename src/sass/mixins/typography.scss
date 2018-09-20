@@ -1,0 +1,148 @@
+@import '../config/colors';
+@import '../config/sizes';
+@import '../mixins/screen';
+
+// Headings (H1, H2)
+@font-face {
+    font-family: Veneer;
+    src: url('../fonts/heading/VeneerTwo.eot');
+    src: url('../fonts/heading/VeneerTwo.ttf') format('truetype'),
+    url('../fonts/heading/VeneerTwo.woff') format('woff'),
+    url('../fonts/heading/VeneerTwo.woff2') format('woff2'),
+    url('../fonts/heading/VeneerTwo.svg') format('svg');
+}
+
+// Headings (H3)
+@font-face {
+    font-family: Lobster;
+    src: url('../fonts/heading/Lobster14.eot');
+    src: url('../fonts/heading/Lobster14.ttf') format('truetype'),
+    url('../fonts/heading/Lobster14.woff') format('woff'),
+    url('../fonts/heading/Lobster14.woff2') format('woff2'),
+    url('../fonts/heading/Lobster14.svg') format('svg');
+}
+
+// Headings (H4)
+@font-face {
+    font-family: Gotham-bold;
+    src: url('../fonts/heading/Gotham-Medium.eot');
+    src: url('../fonts/heading/Gotham-Medium.ttf') format('truetype'),
+    url('../fonts/heading/Gotham-Medium.woff') format('woff'),
+    url('../fonts/heading/Gotham-Medium.woff2') format('woff2'),
+    url('../fonts/heading/Gotham-Medium.svg') format('svg');
+}
+
+@font-face {
+    font-family: Bardley-fancy;
+    src: url('../fonts/paragraph/Bardley-fancy.eot');
+    src: url('../fonts/paragraph/Bardley-fancy.ttf') format('truetype'),
+    url('../fonts/paragraph/Bardley-fancy.woff') format('woff'),
+    url('../fonts/paragraph/Bardley-fancy.woff2') format('woff2'),
+    url('../fonts/paragraph/Bardley-fancy.svg') format('svg');
+}
+
+// Paragraphs
+@font-face {
+    font-family: Gotham-book;
+    src: url('../fonts/paragraph/Gotham-book.eot');
+    src: url('../fonts/paragraph/Gotham-book.ttf') format('truetype'),
+    url('../fonts/paragraph/Gotham-book.woff') format('woff'),
+    url('../fonts/paragraph/Gotham-book.svg') format('svg');
+}
+
+// Bold paragraphs
+@font-face {
+    font-family: Gotham-italic;
+    src: url('../fonts/paragraph/Gotham-BoldItalic.eot');
+    src: url('../fonts/paragraph/Gotham-BoldItalic.ttf') format('truetype'),
+    url('../fonts/paragraph/Gotham-BoldItalic.woff') format('woff'),
+    url('../fonts/paragraph/Gotham-BoldItalic.svg') format('svg');
+}
+
+// Light
+@font-face {
+    font-family: Gotham-light;
+    src: url('../fonts/paragraph/Gotham-Light.eot');
+    src: url('../fonts/paragraph/Gotham-Light.ttf') format('truetype'),
+    url('../fonts/paragraph/Gotham-Light.woff') format('woff'),
+    url('../fonts/paragraph/Gotham-Light.svg') format('svg');
+}
+
+$font-prim:         Veneer, 'Arial', 'open-sans';
+$font-sec:          Lobster, 'Arial', 'open-sans';
+$font-third:        Gotham-bold, 'sans-serif', 'Arial';
+
+$font-point:        Bardley-fancy, 'sans-serif', 'Arial';
+$font-par:          Gotham-book, 'sans-serif', 'Arial';
+$font-par-i:        Gotham-italic, 'sans-serif', 'Arial';
+$font-light:        Gotham-light, 'sans-serif', 'Arial';
+
+@mixin style-heading {
+    color: $c-black;
+    font-family: $font-prim;
+    font-size: 2.625rem;
+    font-weight: 400;
+    line-height: 1;
+}
+
+@mixin style-heading-second {
+    color: $c-second;
+    font-family: $font-sec;
+    font-size: 1.75rem;
+    font-weight: 400;
+    line-height: 1.1;
+    margin: 0 0 .625rem;
+}
+
+@mixin style-heading-third {
+    color: $c-black;
+    font-family: $font-third;
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 30px
+}
+
+@mixin style-quote {
+    color: $c-dark-grey;
+    font-family: $font-par-i;
+    font-size: 1.125rem;
+}
+
+@mixin style-quote-fancy {
+    color: $c-second;
+    font-family: $font-point;
+    font-size: 1.25rem;
+    font-weight: 200;
+}
+
+@mixin style-regular {
+    color: $c-black;
+    font-family: $font-par;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+@mixin style-light {
+    color: $c-black;
+    font-family: $font-light;
+    font-size: 1.125rem;
+    font-weight: 200;
+}
+
+h1,
+h2 {
+    @include style-heading;
+}
+
+h3 {
+    @include style-heading-second;
+}
+
+h4 {
+    @include style-heading-third;
+}
+
+h5 {
+    @include style-light;
+}

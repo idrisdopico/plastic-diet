@@ -1,0 +1,8 @@
+@import '../config/sizes';
+@import '../mixins/screen';
+
+@mixin container {
+    max-width: 1200px;
+    padding: 0 1rem;
+    width: 100%;
+}
