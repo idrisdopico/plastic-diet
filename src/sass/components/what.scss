@@ -32,6 +32,10 @@
     @include screen($screen-normal) {
         padding: 4.5rem 2.75rem;
 
+        &__heading {
+            margin: 0 auto 2.375rem;
+        }
+
         &__article {
             display: flex;
             flex-direction: row;
@@ -60,8 +64,12 @@
 
     @include screen($screen-normal-plus) {
         &__wrapper {
-            max-width: 700px;
+            max-width: 750px;
             align-content: flex-end;
+        }
+
+        &__media {
+            left: -55px;
         }
     }
 }

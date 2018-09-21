@@ -3,7 +3,13 @@
 .form {
     bottom: 2.4rem;
     max-width: 700px;
+    opacity: 0;
+    transition: opacity .25s 1.25s;
     position: relative;
+
+    &.is-active {
+        opacity: 1;
+    }
 
     &__input {
         @include style-regular;
@@ -37,9 +43,7 @@
 
         &__button {
             border: 0;
-            border-radius: 0;
-            border-top-right-radius: 40px;
-            border-bottom-right-radius: 40px;
+            border-radius: 0 40px 40px 0;
         }
     }
 

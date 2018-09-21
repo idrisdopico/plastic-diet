@@ -126,6 +126,36 @@
             padding: 0 2.75rem 1.5rem;
         }
 
+        &__article {
+            &:first-child {
+                &:hover {
+                    .top3__circle {
+                        transform: translateY(-10px);
+                    }
+                }
+            }
+
+            &:nth-child(2) {
+                &:hover {
+                    .top3__circle {
+                        transform: translateY(-10px);
+                    }
+                }
+            }
+
+            &:last-child {
+                &:hover {
+                    .top3__circle {
+                        transform: translateY(-10px);
+                    }
+                }
+            }
+        }
+
+        &__circle {
+            transition: transform .25s;
+        }
+
         &__paper-quote {
             height: 410px;
         }
