@@ -15,6 +15,11 @@
         &::placeholder {
             color: #999;
         }
+
+        &:focus {
+            border: 0;
+            outline: none;
+        }
     }
 
     &__button {
@@ -35,6 +40,18 @@
             border-radius: 0;
             border-top-right-radius: 40px;
             border-bottom-right-radius: 40px;
+        }
+    }
+
+    @include screen($screen-normal) {
+        bottom: inherit;
+
+        &__input {
+            max-width: 384px;
+        }
+
+        &__button {
+            max-width: 295px;
         }
     }
 }

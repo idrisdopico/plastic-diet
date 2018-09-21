@@ -1,13 +1,12 @@
 @import "../mixins/container";
 
 .logos {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    max-width: 1200px;
-    padding: 0 1rem;
+    left: 50%;
+    margin: 0 auto;
+    max-width: $screen-xlarge;
     position: absolute;
     top: .8rem;
+    transform: translateX(-50%);
     width: 100%;
     z-index: 99;
 
@@ -17,16 +16,30 @@
 
     &__diet {
         height: auto;
+        left: 10px;
+        position: absolute;
         width: 170px;
     }
 
     &__soup {
         height: 37px;
+        position: absolute;
+        right: 1rem;
         width: auto;
     }
 
     @include screen($screen-simple) {
-        top: 2.125rem;
         padding: 0 2rem 0 2.75rem;
+        top: 2.125rem;
+    }
+
+    @include screen($screen-normal) {
+        &__soup {
+            right: 1.5rem;
+        }
+
+        &__diet {
+            left: 2.75rem;
+        }
     }
 }

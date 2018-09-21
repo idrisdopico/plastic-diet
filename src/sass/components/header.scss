@@ -2,20 +2,25 @@
 @import '../mixins/container';
 
 .header {
-    display: block;
-    position: relative;
-    background: url('../img/background-mobile.png') center center no-repeat $c-ocean;
-    background-size: cover;
-    margin: 0 0 170px;
-    height: 450px;
+    background: $c-grey;
+
+    &__container {
+        background: url('../img/background-mobile.png') center center no-repeat $c-ocean;
+        background-size: cover;
+        display: block;
+        height: 450px;
+        margin: 0 auto 170px;
+        max-width: $screen-xlarge;
+        position: relative;
+    }
 
     &__wrapper {
         @include container;
         background: $c-ocean;
         bottom: 0;
         height: 190px;
-        transform: translateY(calc(100% - 30px));
         position: absolute;
+        transform: translateY(calc(100% - 30px));
         width: 100%;
     }
 
@@ -39,10 +44,12 @@
     }
 
     @include screen($screen-minimal) {
-        background: url('../img/background.png') top center no-repeat $c-ocean;
-        background-size: contain;
-        margin: 0;
-        height: 620px;
+        &__container {
+            background: url('../img/background.png') top center no-repeat $c-ocean;
+            background-size: contain;
+            height: 620px;
+            margin: 0 auto;
+        }
 
         &__wrapper {
             background: transparent;
@@ -66,8 +73,25 @@
     }
 
     @include screen($screen-normal) {
+        &__container {
+            background: url('../img/background.png') center center no-repeat $c-ocean;
+            background-size: cover;
+        }
+
+        &__wrapper {
+            padding: 0 7.375rem;
+            top: 50%;
+            transform: translateY(calc(-50% + 1rem));
+        }
+
+        &__heading {
+            margin: 0 0 3.25rem;
+            top: auto;
+        }
+
         &__title {
-            margin: 0 0 1rem;
+            margin: 0;
+            width: 600px;
         }
     }
 }

@@ -3,9 +3,10 @@
 
 .what {
     @include section;
+    position: relative;
 
     &__heading {
-        margin: 0 0 1.5rem;
+        margin: 0 auto 1.5rem;
     }
 
     &__media {
@@ -26,5 +27,41 @@
 
     @include screen($screen-simple) {
         padding: 2.25rem 2.75rem;
+    }
+
+    @include screen($screen-normal) {
+        padding: 4.5rem 2.75rem;
+
+        &__article {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+        }
+
+        &__media {
+            display: inline-block;
+            max-height: 633px;
+            max-width: initial;
+            position: absolute;
+            left: 0;
+            top: 75px;
+            z-index: 1;
+        }
+
+        &__wrapper {
+            max-width: 570px;
+            align-content: flex-end;
+        }
+
+        &__content {
+            display: inline-block;
+        }
+    }
+
+    @include screen($screen-normal-plus) {
+        &__wrapper {
+            max-width: 700px;
+            align-content: flex-end;
+        }
     }
 }

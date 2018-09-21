@@ -3,12 +3,16 @@
 
 .top3 {
     background: $c-grey;
-    margin: 0 0 calc(230px + 3.25rem);
+
+    &__background {
+        margin: 0 0 calc(230px + 3.25rem);
+        padding: 2.875rem 0 0 0;
+    }
 
     &__container {
         @include section;
         background: $c-grey;
-        padding: 2.875rem 1rem 1.5rem;
+        padding: 0 1rem 1.5rem;
         position: relative;
         text-align: center;
     }
@@ -23,6 +27,11 @@
         &:last-child {
             margin: 0;
         }
+    }
+
+    &__content {
+        position: relative;
+        z-index: 1;
     }
 
     &__circle {
@@ -80,7 +89,9 @@
     }
 
     @include screen($screen-minimal) {
-        margin: 0 0 calc(280px + 3.25rem);
+        &__background {
+            margin: 0 0 calc(280px + 3.25rem);
+        }
 
         &__article {
             margin: 0 auto 2rem;
@@ -100,19 +111,90 @@
         }
 
         &__image {
+            max-height: 330px;
             width: 80%;
         }
     }
 
     @include screen($screen-simple) {
-        margin: 0 0 calc(410px + 3.25rem);
+        &__background {
+            margin: 0 0 calc(410px + 3.25rem);
+            padding: 2.875rem 0 0;
+        }
 
         &__container {
-            padding: 2.875rem 2.75rem 1.5rem;
+            padding: 0 2.75rem 1.5rem;
         }
 
         &__paper-quote {
             height: 410px;
+        }
+
+        &__image {
+            max-height: 530px;
+        }
+    }
+
+    @include screen($screen-normal) {
+        &__heading {
+            margin: 0 0 3.125rem;
+        }
+
+        &__container {
+            padding: 0 2.75rem 4.75rem;
+        }
+
+        &__article {
+            display: flex;
+            flex-direction: row;
+            margin: 0 0 2.125rem;
+            max-width: 800px;
+
+            &:last-child {
+                margin: 0;
+            }
+        }
+
+        &__circle {
+            margin: 0 1.75rem 0 0;
+            min-width: 100px;
+            text-align: center;
+        }
+
+        &__content {
+            text-align: left;
+        }
+    }
+
+    @include screen($screen-large) {
+        &__background {
+            margin: 0 0 5rem;
+            padding: 4.875rem 0 0;
+        }
+
+        &__paper-quote {
+            height: auto;
+            position: relative;
+        }
+
+        &__wrapper {
+            left: auto;
+            right: 10%;
+            top: -560px;
+        }
+
+        &__image-wrap {
+            bottom: 0;
+            height: 587px;
+            overflow: hidden;
+            position: absolute;
+            right: 0;
+            width: 870px;
+        }
+
+        &__image {
+            right: -60px;
+            width: 780px;
         }
     }
 }

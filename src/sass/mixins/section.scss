@@ -3,6 +3,8 @@
 
 @mixin section {
     padding: 2rem 1rem;
+    margin: 0 auto;
+    max-width: $screen-large;
 
     @include screen($screen-simple) {
         padding: 0 2.75rem;

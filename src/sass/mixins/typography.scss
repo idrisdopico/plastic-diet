@@ -138,11 +138,16 @@ $font-light:        Gotham-light, 'sans-serif', 'Arial';
     font-family: $font-light;
     font-size: 1.125rem;
     font-weight: 200;
+    line-height: 24px;
 }
 
 h1,
 h2 {
     @include style-heading;
+
+    @include screen($screen-normal) {
+        line-height: 1;
+    }
 }
 
 h3 {

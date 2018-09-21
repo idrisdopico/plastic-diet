@@ -1,8 +1,12 @@
 @import "../config/colors";
 @import "../mixins/container";
 @import "../mixins/typography";
+@import "../mixins/section";
 
 .experts {
+    @include section;
+    padding: 0;
+
     &__heading {
         margin: 0 0 2.625rem;
     }
@@ -15,8 +19,8 @@
 
     &__teaser {
         display: flex;
-        flex-wrap: wrap;
         flex: 0 1 100%;
+        flex-wrap: wrap;
         margin: 0;
         max-width: 100%;
         min-height: 522px;
@@ -84,7 +88,7 @@
 
     @include screen($screen-minimal) {
         &__teaser {
-            flex: 0 1 50%;
+            flex: 0 1 calc(100% / 2);
             margin: 0;
             max-width: calc(100% / 2);
             padding: 1rem;
@@ -96,12 +100,32 @@
     }
 
     @include screen($screen-simple) {
+        padding: 0;
+
         &__image {
             top: -147px;
 
             &--woman {
                 top: -227px;
             }
+        }
+    }
+
+    @include screen($screen-normal) {
+        &__teaser {
+            flex: 0 1 calc(100% / 3);
+            max-width: calc(100% / 3);
+            padding: .8rem;
+        }
+
+        &__image {
+            &--old {
+                top: -177px;
+            }
+        }
+
+        &__status {
+            margin: 0 0 .375rem;
         }
     }
 }
